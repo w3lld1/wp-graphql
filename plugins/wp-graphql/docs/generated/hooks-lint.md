@@ -7,14 +7,26 @@ Do not edit manually.
 ## Summary
 
 - Errors: 0
-- Warnings: 31
-- Total findings: 31
+- Warnings: 33
+- Total findings: 33
 
 ## Findings by Type
 
+- `missing_hook_group`: 2
 - `naming_convention`: 31
 
 ## Findings
+
+### `missing_hook_group`
+
+- **Hook:** `graphql_setting_field_value`
+  - Severity: warning
+  - Message: Missing @hookGroup tag
+  - Source: `plugins/wp-graphql/src/Type/ObjectType/SettingGroup.php` (line 149)
+- **Hook:** `graphql_setting_field_value`
+  - Severity: warning
+  - Message: Missing @hookGroup tag
+  - Source: `plugins/wp-graphql/src/Type/ObjectType/Settings.php` (line 151)
 
 ### `naming_convention`
 
@@ -93,11 +105,11 @@ Do not edit manually.
 - **Hook:** `init_graphql_type_registry`
   - Severity: warning
   - Message: deprecated_prefix: Hook name uses deprecated prefix "init_graphql_".
-  - Source: `plugins/wp-graphql/src/Registry/TypeRegistry.php` (line 289)
+  - Source: `plugins/wp-graphql/src/Registry/TypeRegistry.php` (line 291)
 - **Hook:** `init_graphql_type_registry`
   - Severity: warning
   - Message: nonstandard_prefix: Hook name does not use the expected WPGraphQL namespace prefix.
-  - Source: `plugins/wp-graphql/src/Registry/TypeRegistry.php` (line 289)
+  - Source: `plugins/wp-graphql/src/Registry/TypeRegistry.php` (line 291)
 - **Hook:** `init_graphql_request`
   - Severity: warning
   - Message: deprecated_prefix: Hook name uses deprecated prefix "init_graphql_".

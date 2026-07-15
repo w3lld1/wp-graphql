@@ -146,7 +146,7 @@ class Settings {
 							 * @param array<string,mixed> $setting_field The setting field config, including its `key` and `type`.
 							 * @param string              $group_name    The name of the settings group the field belongs to.
 							 *
-							 * @since x-release-please-version
+							 * @since 2.18.0
 							 */
 							return apply_filters( 'graphql_setting_field_value', $option, $setting_field, $group );
 						},

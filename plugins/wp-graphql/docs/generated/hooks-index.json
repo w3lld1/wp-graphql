@@ -1,10 +1,10 @@
 {
   "plugin": "wp-graphql",
-  "generatedAt": "2026-07-07T15:47:25.928Z",
+  "generatedAt": "2026-07-15T16:47:37.158Z",
   "stats": {
-    "totalHooks": 277,
+    "totalHooks": 280,
     "actions": 62,
-    "filters": 215,
+    "filters": 218,
     "dynamic": 16,
     "snippets": 0
   },
@@ -85,6 +85,20 @@
   "lint": {
     "errors": [],
     "warnings": [
+      {
+        "type": "missing_hook_group",
+        "hook": "graphql_setting_field_value",
+        "file": "plugins/wp-graphql/src/Type/ObjectType/SettingGroup.php",
+        "line": 149,
+        "message": "Missing @hookGroup tag"
+      },
+      {
+        "type": "missing_hook_group",
+        "hook": "graphql_setting_field_value",
+        "file": "plugins/wp-graphql/src/Type/ObjectType/Settings.php",
+        "line": 151,
+        "message": "Missing @hookGroup tag"
+      },
       {
         "type": "naming_convention",
         "hook": "enqueue_graphiql_extension",
@@ -215,14 +229,14 @@
         "type": "naming_convention",
         "hook": "init_graphql_type_registry",
         "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-        "line": 289,
+        "line": 291,
         "message": "deprecated_prefix: Hook name uses deprecated prefix \"init_graphql_\"."
       },
       {
         "type": "naming_convention",
         "hook": "init_graphql_type_registry",
         "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-        "line": 289,
+        "line": 291,
         "message": "nonstandard_prefix: Hook name does not use the expected WPGraphQL namespace prefix."
       },
       {
@@ -308,7 +322,7 @@
     "flaggedHooks": 31,
     "warnings": 31,
     "errors": 0,
-    "wpgraphqlHooks": 257,
+    "wpgraphqlHooks": 260,
     "coreHooks": 20
   },
   "hooks": [
@@ -323,7 +337,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "WPEnumType::prepare_values()",
       "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-      "line": 142,
+      "line": 150,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filters enum values for a specific type using the canonical type name.",
@@ -369,7 +383,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "WPEnumType::prepare_values()",
       "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-      "line": 133,
+      "line": 141,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Pass the values through a filter Filter for lcfirst( $type_name ) was added for backward compatibility This is useful for more targeted filtering, and is applied after the general filter, to allow for more specific overrides",
@@ -1682,7 +1696,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "PostObjectConnectionResolver::sanitize_post_stati()",
       "file": "plugins/wp-graphql/src/Data/Connection/PostObjectConnectionResolver.php",
-      "line": 547,
+      "line": 585,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filters the post statuses the current user is allowed to query in this connection. Allows extensions to adjust which statuses are queryable (for example to expose an additional custom status to specific users, or to further restrict access).",
@@ -1727,7 +1741,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Data/Connection/PostObjectConnectionResolver.php",
-          "line": 547,
+          "line": 585,
           "symbol": "PostObjectConnectionResolver::sanitize_post_stati()",
           "emitter": "apply_filters"
         }
@@ -1745,7 +1759,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "DataSource::get_allowed_settings()",
       "file": "plugins/wp-graphql/src/Data/DataSource.php",
-      "line": 454,
+      "line": 502,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the $allowed_settings to allow some to be enabled or disabled from showing in the GraphQL Schema.",
@@ -1775,7 +1789,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Data/DataSource.php",
-          "line": 454,
+          "line": 502,
           "symbol": "DataSource::get_allowed_settings()",
           "emitter": "apply_filters"
         }
@@ -1793,7 +1807,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "DataSource::get_allowed_settings_by_group()",
       "file": "plugins/wp-graphql/src/Data/DataSource.php",
-      "line": 393,
+      "line": 476,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the $allowed_settings_by_group to allow enabling or disabling groups in the GraphQL Schema.",
@@ -1823,7 +1837,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Data/DataSource.php",
-          "line": 393,
+          "line": 476,
           "symbol": "DataSource::get_allowed_settings_by_group()",
           "emitter": "apply_filters"
         }
@@ -4728,7 +4742,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "WPEnumType::prepare_values()",
       "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-      "line": 117,
+      "line": 125,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter all object fields, passing the $typename as a param This is useful when several different types need to be easily filtered at once. . .for example, if ALL types with a field of a certain name needed to be adjusted, or something to that tune",
@@ -4763,7 +4777,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 117,
+          "line": 125,
           "symbol": "WPEnumType::prepare_values()",
           "emitter": "apply_filters"
         }
@@ -4781,7 +4795,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "TypeRegistry::get_excluded_connections()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 1855,
+      "line": 1892,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the list of GraphQL connections to excluded from the registry.",
@@ -4811,7 +4825,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 1855,
+          "line": 1892,
           "symbol": "TypeRegistry::get_excluded_connections()",
           "emitter": "apply_filters"
         }
@@ -4829,7 +4843,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "TypeRegistry::get_excluded_mutations()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 1882,
+      "line": 1919,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the list of GraphQL mutations to excluded from the registry.",
@@ -4859,7 +4873,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 1882,
+          "line": 1919,
           "symbol": "TypeRegistry::get_excluded_mutations()",
           "emitter": "apply_filters"
         }
@@ -4877,7 +4891,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "TypeRegistry::get_excluded_types()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 1827,
+      "line": 1864,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the list of GraphQL types to exclude from the schema. Note: using this filter directly will NOT remove the type from being referenced as a possible interface or a union type. To remove a GraphQL from the schema **entirely**, please use deregister_graphql_type();",
@@ -4907,7 +4921,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 1827,
+          "line": 1864,
           "symbol": "TypeRegistry::get_excluded_types()",
           "emitter": "apply_filters"
         }
@@ -5826,7 +5840,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "TypeRegistry::get_type()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 1039,
+      "line": 1076,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the type before it is loaded into the registry.",
@@ -5861,7 +5875,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 1039,
+          "line": 1076,
           "symbol": "TypeRegistry::get_type()",
           "emitter": "apply_filters"
         }
@@ -6566,7 +6580,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "TypeRegistry::get_introspection_keys()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 927,
+      "line": 964,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the keys that are prepared for introspection.",
@@ -6596,7 +6610,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 927,
+          "line": 964,
           "symbol": "TypeRegistry::get_introspection_keys()",
           "emitter": "apply_filters"
         }
@@ -6972,7 +6986,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "PostObjectConnectionResolver::sanitize_input_fields()",
       "file": "plugins/wp-graphql/src/Data/Connection/PostObjectConnectionResolver.php",
-      "line": 465,
+      "line": 503,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filter the input fields This allows plugins/themes to hook in and alter what $args should be allowed to be passed from a GraphQL Query to the WP_Query",
@@ -7032,7 +7046,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Data/Connection/PostObjectConnectionResolver.php",
-          "line": 465,
+          "line": 503,
           "symbol": "PostObjectConnectionResolver::sanitize_input_fields()",
           "emitter": "apply_filters"
         }
@@ -7408,7 +7422,7 @@
       ],
       "argumentCount": 4,
       "docblockParamCount": 4,
-      "since": "x-release-please-version",
+      "since": "2.18.0",
       "hookGroup": "connections",
       "isDynamic": false,
       "rawExpression": "'graphql_menu_item_connection_restrict_to_locations'",
@@ -7789,6 +7803,59 @@
     },
     {
       "pluginSlug": "wp-graphql",
+      "name": "graphql_normalized_settings",
+      "kind": "filter",
+      "group": "settings",
+      "groupLabel": "Settings and Admin",
+      "groupSource": "explicit",
+      "sourceType": "wpgraphql",
+      "emitter": "apply_filters",
+      "enclosingSymbol": "DataSource::get_normalized_settings()",
+      "file": "plugins/wp-graphql/src/Data/DataSource.php",
+      "line": 406,
+      "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
+      "repositoryRef": "main",
+      "description": "Filter the normalized settings map before the read and mutation surfaces are derived from it. This is the seam for exposing options WordPress never registers via register_setting(): seed an entry here, in memory, instead of mutating the global settings registry. Entries follow the register_setting() args shape (`group`, `type`, `description`, ...) plus a `key` holding the option name, and support WPGraphQL-specific config: `graphql_readonly` (bool) rejects updates to the setting through the updateSettings mutation, and `graphql_resolve` (callable) normalizes the setting's resolved value.",
+      "params": [
+        {
+          "type": "array<string,array<string,mixed>>",
+          "name": "$normalized_settings",
+          "description": "The normalized settings map, keyed by option name."
+        },
+        {
+          "type": "\\WPGraphQL\\Registry\\TypeRegistry",
+          "name": "$type_registry",
+          "description": "The WPGraphQL TypeRegistry."
+        }
+      ],
+      "argumentCount": 2,
+      "docblockParamCount": 2,
+      "since": "2.18.0",
+      "hookGroup": "settings",
+      "isDynamic": false,
+      "rawExpression": "'graphql_normalized_settings'",
+      "sourceCall": "apply_filters( 'graphql_normalized_settings', $normalized_settings, $type_registry );",
+      "relatedSnippets": [],
+      "lifecycle": {
+        "status": "active",
+        "deprecatedIn": null,
+        "removedIn": null,
+        "replacement": null,
+        "message": null,
+        "source": null
+      },
+      "relatedReferences": [
+        {
+          "file": "plugins/wp-graphql/src/Data/DataSource.php",
+          "line": 406,
+          "symbol": "DataSource::get_normalized_settings()",
+          "emitter": "apply_filters"
+        }
+      ],
+      "relatedRecipes": []
+    },
+    {
+      "pluginSlug": "wp-graphql",
       "name": "graphql_object_fields",
       "kind": "filter",
       "group": "schema-registration",
@@ -8071,7 +8138,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "PostObjectConnectionResolver::prepare_args()",
       "file": "plugins/wp-graphql/src/Data/Connection/PostObjectConnectionResolver.php",
-      "line": 661,
+      "line": 699,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filters the GraphQL args before they are used in get_query_args().",
@@ -8111,7 +8178,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Data/Connection/PostObjectConnectionResolver.php",
-          "line": 661,
+          "line": 699,
           "symbol": "PostObjectConnectionResolver::prepare_args()",
           "emitter": "apply_filters"
         }
@@ -10637,7 +10704,7 @@
       "emitter": "do_action",
       "enclosingSymbol": "TypeRegistry::init_type_registry()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 310,
+      "line": 312,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Fire an action as the type registry is initialized. This executes before the `graphql_register_types` action to allow for earlier hooking",
@@ -10667,7 +10734,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 310,
+          "line": 312,
           "symbol": "TypeRegistry::init_type_registry()",
           "emitter": "do_action"
         }
@@ -10733,7 +10800,7 @@
       "emitter": "do_action",
       "enclosingSymbol": "TypeRegistry::init_type_registry()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 712,
+      "line": 746,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Fire an action as the type registry is initialized. This executes before the `graphql_register_types` action to allow for earlier hooking",
@@ -10763,7 +10830,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 712,
+          "line": 746,
           "symbol": "TypeRegistry::init_type_registry()",
           "emitter": "do_action"
         }
@@ -11003,7 +11070,7 @@
       "emitter": "do_action",
       "enclosingSymbol": "TypeRegistry::init_type_registry()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 722,
+      "line": 756,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Fire an action as the type registry is initialized. This executes during the `graphql_register_types` action to allow for earlier hooking",
@@ -11033,7 +11100,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 722,
+          "line": 756,
           "symbol": "TypeRegistry::init_type_registry()",
           "emitter": "do_action"
         }
@@ -11544,7 +11611,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "DataSource::resolve_node_type()",
       "file": "plugins/wp-graphql/src/Data/DataSource.php",
-      "line": 563,
+      "line": 611,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Add a filter to allow externally registered node types to return the proper type based on the node_object that's returned",
@@ -11579,7 +11646,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Data/DataSource.php",
-          "line": 563,
+          "line": 611,
           "symbol": "DataSource::resolve_node_type()",
           "emitter": "apply_filters"
         }
@@ -12673,6 +12740,134 @@
     },
     {
       "pluginSlug": "wp-graphql",
+      "name": "graphql_setting_field_value",
+      "kind": "filter",
+      "group": "uncategorized",
+      "groupLabel": "Uncategorized",
+      "groupSource": "fallback",
+      "sourceType": "wpgraphql",
+      "emitter": "apply_filters",
+      "enclosingSymbol": "SettingGroup::get_settings_group_fields()",
+      "file": "plugins/wp-graphql/src/Type/ObjectType/SettingGroup.php",
+      "line": 149,
+      "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
+      "repositoryRef": "main",
+      "description": "Filters the resolved value of a single settings field before it is returned in the Schema. This gives extensions a seam to normalize or override a setting's resolved value without adding one-off special cases to the core resolver.",
+      "params": [
+        {
+          "type": "mixed",
+          "name": "$value",
+          "description": "The resolved (and type-cast) value of the setting field."
+        },
+        {
+          "type": "array<string,mixed>",
+          "name": "$setting_field",
+          "description": "The setting field config, including its `key` and `type`."
+        },
+        {
+          "type": "string",
+          "name": "$group_name",
+          "description": "The name of the settings group the field belongs to."
+        }
+      ],
+      "argumentCount": 3,
+      "docblockParamCount": 3,
+      "since": "2.18.0",
+      "hookGroup": null,
+      "isDynamic": false,
+      "rawExpression": "'graphql_setting_field_value'",
+      "sourceCall": "apply_filters( 'graphql_setting_field_value', $value, $setting_field, $group_name );",
+      "relatedSnippets": [],
+      "lifecycle": {
+        "status": "active",
+        "deprecatedIn": null,
+        "removedIn": null,
+        "replacement": null,
+        "message": null,
+        "source": null
+      },
+      "relatedReferences": [
+        {
+          "file": "plugins/wp-graphql/src/Type/ObjectType/SettingGroup.php",
+          "line": 149,
+          "symbol": "SettingGroup::get_settings_group_fields()",
+          "emitter": "apply_filters"
+        },
+        {
+          "file": "plugins/wp-graphql/src/Type/ObjectType/Settings.php",
+          "line": 151,
+          "symbol": "Settings::get_fields()",
+          "emitter": "apply_filters"
+        }
+      ],
+      "relatedRecipes": []
+    },
+    {
+      "pluginSlug": "wp-graphql",
+      "name": "graphql_setting_field_value",
+      "kind": "filter",
+      "group": "uncategorized",
+      "groupLabel": "Uncategorized",
+      "groupSource": "fallback",
+      "sourceType": "wpgraphql",
+      "emitter": "apply_filters",
+      "enclosingSymbol": "Settings::get_fields()",
+      "file": "plugins/wp-graphql/src/Type/ObjectType/Settings.php",
+      "line": 151,
+      "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
+      "repositoryRef": "main",
+      "description": "Filters the resolved value of a single settings field before it is returned in the Schema. This is the same seam applied by the grouped setting types, so a setting's value resolves consistently on both read surfaces.",
+      "params": [
+        {
+          "type": "mixed",
+          "name": "$value",
+          "description": "The resolved (and type-cast) value of the setting field."
+        },
+        {
+          "type": "array<string,mixed>",
+          "name": "$setting_field",
+          "description": "The setting field config, including its `key` and `type`."
+        },
+        {
+          "type": "string",
+          "name": "$group_name",
+          "description": "The name of the settings group the field belongs to."
+        }
+      ],
+      "argumentCount": 3,
+      "docblockParamCount": 3,
+      "since": "2.18.0",
+      "hookGroup": null,
+      "isDynamic": false,
+      "rawExpression": "'graphql_setting_field_value'",
+      "sourceCall": "apply_filters( 'graphql_setting_field_value', $option, $setting_field, $group );",
+      "relatedSnippets": [],
+      "lifecycle": {
+        "status": "active",
+        "deprecatedIn": null,
+        "removedIn": null,
+        "replacement": null,
+        "message": null,
+        "source": null
+      },
+      "relatedReferences": [
+        {
+          "file": "plugins/wp-graphql/src/Type/ObjectType/SettingGroup.php",
+          "line": 149,
+          "symbol": "SettingGroup::get_settings_group_fields()",
+          "emitter": "apply_filters"
+        },
+        {
+          "file": "plugins/wp-graphql/src/Type/ObjectType/Settings.php",
+          "line": 151,
+          "symbol": "Settings::get_fields()",
+          "emitter": "apply_filters"
+        }
+      ],
+      "relatedRecipes": []
+    },
+    {
+      "pluginSlug": "wp-graphql",
       "name": "graphql_settings_enqueue_scripts",
       "kind": "action",
       "group": "settings",
@@ -13660,7 +13855,7 @@
       "emitter": "apply_filters",
       "enclosingSymbol": "WPEnumType::__construct()",
       "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-      "line": 54,
+      "line": 62,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Filters the GraphQL type name used during enum type construction.",
@@ -13700,7 +13895,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 54,
+          "line": 62,
           "symbol": "WPEnumType::__construct()",
           "emitter": "apply_filters"
         },
@@ -13788,7 +13983,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 54,
+          "line": 62,
           "symbol": "WPEnumType::__construct()",
           "emitter": "apply_filters"
         },
@@ -13876,7 +14071,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 54,
+          "line": 62,
           "symbol": "WPEnumType::__construct()",
           "emitter": "apply_filters"
         },
@@ -13964,7 +14159,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 54,
+          "line": 62,
           "symbol": "WPEnumType::__construct()",
           "emitter": "apply_filters"
         },
@@ -14052,7 +14247,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 54,
+          "line": 62,
           "symbol": "WPEnumType::__construct()",
           "emitter": "apply_filters"
         },
@@ -14140,7 +14335,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Type/WPEnumType.php",
-          "line": 54,
+          "line": 62,
           "symbol": "WPEnumType::__construct()",
           "emitter": "apply_filters"
         },
@@ -15428,7 +15623,7 @@
       "emitter": "do_action",
       "enclosingSymbol": "TypeRegistry::init()",
       "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-      "line": 289,
+      "line": 291,
       "repositoryUrl": "https://github.com/wp-graphql/wp-graphql",
       "repositoryRef": "main",
       "description": "Fire an action as the Type registry is being initiated.",
@@ -15458,7 +15653,7 @@
       "relatedReferences": [
         {
           "file": "plugins/wp-graphql/src/Registry/TypeRegistry.php",
-          "line": 289,
+          "line": 291,
           "symbol": "TypeRegistry::init()",
           "emitter": "do_action"
         }

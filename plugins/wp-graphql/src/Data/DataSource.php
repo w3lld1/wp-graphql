@@ -343,7 +343,7 @@ class DataSource {
 	 *
 	 * @return array<string,array<string,mixed>>
 	 *
-	 * @since x-release-please-version
+	 * @since 2.18.0
 	 */
 	protected static function get_normalized_settings( TypeRegistry $type_registry ): array {
 
@@ -401,7 +401,7 @@ class DataSource {
 		 * @param \WPGraphQL\Registry\TypeRegistry  $type_registry       The WPGraphQL TypeRegistry.
 		 *
 		 * @hookGroup settings
-		 * @since x-release-please-version
+		 * @since 2.18.0
 		 */
 		$normalized_settings = apply_filters( 'graphql_normalized_settings', $normalized_settings, $type_registry );
 
@@ -424,7 +424,7 @@ class DataSource {
 	 *
 	 * @return array<string,array<string,mixed>>
 	 *
-	 * @since x-release-please-version
+	 * @since 2.18.0
 	 */
 	protected static function get_core_setting_config(): array {
 		return [
