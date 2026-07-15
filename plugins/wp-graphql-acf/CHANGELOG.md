@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/wp-graphql/wp-graphql/compare/wp-graphql-acf/v2.6.5...wp-graphql-acf/v2.7.0) (2026-07-15)
+
+
+### New Features
+
+* **settings:** support per-entry config in the normalized settings map ([#4049](https://github.com/wp-graphql/wp-graphql/issues/4049)) ([b78d6dc](https://github.com/wp-graphql/wp-graphql/commit/b78d6dcc1c223daa73fea36528ef028ee8427fae))
+
 ## [2.6.5](https://github.com/wp-graphql/wp-graphql/compare/wp-graphql-acf/v2.6.4...wp-graphql-acf/v2.6.5) (2026-07-14)
 
 
